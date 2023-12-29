@@ -1,0 +1,181 @@
+/* GENERAL */
+.site-sections{
+  height: 85%;
+}
+
+.btn{
+  display: flex;
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(127, 73, 213, 0.822);
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn p{
+  margin-left: 10%;
+}
+
+/* NAVBAR */
+.navbar{
+  background-color: white;
+  width: 100%;
+  height: 8%;
+  padding-top: 2%;
+  border-bottom: 1px solid rgba(127, 73, 213, 0.822);
+  position: relative;
+  top: 0;
+  position: sticky;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links{
+  display: flex;
+  align-self: center;
+  gap: 17%;
+}
+
+.navbar span{
+  margin-right: 40%;
+}
+
+.navbar a{
+  white-space: nowrap;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+/* HOME */
+.home-page{
+  height: 84%;
+  margin-top: 4%;
+  display: flex;
+  gap: 5%;
+}
+
+.home-page nav{
+  margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 8%;
+}
+
+.home-page nav a{
+  cursor: pointer;
+}
+ 
+.home-page-aboutme{
+  width: 30%;
+}
+
+.home-page-introducing{
+  font-size: large;
+}
+
+.home-page-aboutme p{
+  word-break: keep-all;
+} 
+
+.contact-btn{
+  width: 45%;
+  height: 12%;
+  margin-top: 10%;
+}
+
+.contact-btn-icon{
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+.scroll-down{
+  width: 45%;
+  margin-top: 20%;
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.scroll-down:hover{
+  position: relative;
+  top: 1%
+}
+
+.scroll-down-icon{
+  margin-top: 2%;
+}
+
+.profile-image{
+  margin-top: 1%;
+  margin-left: 3%;
+  width: 25%;
+  height: 60%;
+  border-radius: 50%;
+}
+
+/* ABOUT */
+.about h1{
+  font-size: 40px;
+  text-align: center;
+}
+
+.about-info{
+  width: 80%;
+  height: 75%;
+  position: relative;
+  top: 36%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 5%;
+}
+
+.about-img-div{
+  width: 60%;
+}
+
+.about-img{
+  width: 80%;
+  height: 80%;
+  border-radius: 5px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-context{
+  width: 50%;
+  word-break: keep-all;
+  display: flex;
+  flex-direction: column; 
+}
+
+.years{
+  display: flex;
+  gap: 15%;
+}
+
+.year{
+  width: min-content;
+  text-align: center;
+}
+
+.year span{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.cv-btn{
+  width: 46%;
+  height: 16%;
+}
+
+.cv-btn-icon{
+  margin-top: 8%;
+  margin-left: 4%;
+}
