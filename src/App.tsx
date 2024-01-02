@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import Navbar from './Components/Navbar'
 import HomePage from './Components/HomePage'
 import About from './Components/About'
+import Skills from './Components/Skills'
 import './App.css'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Navbar setClassname={setClassname} setTop={setTop} />
       <HomePage />
       <About />
+      <Skills />
     </div>
   )
 }
