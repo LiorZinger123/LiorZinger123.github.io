@@ -12,9 +12,9 @@ const HomePage = () => {
     <section className="home-page" id="home">
       
       <nav>
-        <a href='https://www.linkedin.com/in/lior-singer-141982244' target="_blank"><SlSocialLinkedin size={25} /></a>
-        <a href='https://www.instagram.com/liorzinger09/' target="_blank"><LuInstagram size={25} /></a>
-        <a href='https://www.facebook.com/profile.php?id=100000319302762' target="_blank"><FaFacebook size={25} /></a>
+        <a href='https://www.linkedin.com/in/lior-singer-141982244' target="_blank"><SlSocialLinkedin size={25} className="site-icons" /></a>
+        <a href='https://www.instagram.com/liorzinger09/' target="_blank"><LuInstagram size={25} className="site-icons" /></a>
+        <a href='https://www.facebook.com/profile.php?id=100000319302762' target="_blank"><FaFacebook size={25} className="site-icons" /></a>
       </nav>
 
       <div className="home-page-aboutme">

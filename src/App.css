@@ -8,6 +8,20 @@ h1{
   height: 85%;
 }
 
+.site-icons{
+  color: rgba(127, 73, 213, 0.822);
+}
+
+.section-info{
+  /* background-color: aqua; */
+  width: 75%;
+  height: 80%;
+  position: relative;
+  top: 38%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+}
+
 .btn{
   display: flex;
   height: max-content;
@@ -129,17 +143,7 @@ h1{
 }
 
 /* ABOUT */
-.about{
-  /* background-color: aqua; */
-}
-
 .about-info{
-  width: 80%;
-  height: 75%;
-  position: relative;
-  top: 36%;
-  left: 45%;
-  transform: translate(-50%, -50%);
   display: flex;
   gap: 5%;
 }
@@ -191,16 +195,11 @@ h1{
 }
 
 /* SKILLS */
-.skiils-icons{
-  color: rgba(127, 73, 213, 0.51);
-}
-
 .selects{
-  width: 80%;
-  height: 80%;
-  margin-left: 10%;
   display: grid;
   grid-template-columns: auto auto;
+  justify-items: center;
+  padding-top: 2%;
 }
 
 .select{
@@ -229,13 +228,66 @@ h1{
   cursor: pointer;
 }
 
-.select-arrow{
-  /* margin-left: 5%; */
-  /* position: relative; */
-  /* left: 30%; */
+/* CONTACT ME */
+.contact-me{
+  /* width: 75%; */
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2%;
 }
 
-.select li{
-  /* border-bottom: 1px solid black; */
-  /* list-style: none; */
+.ways-to-contact{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.way-to-contact{
+  display: grid;
+  grid-template-columns: repeat(2, 15%);
+  grid-template-rows: auto auto;
+}
+
+.way-to-contact-icon{
+  position: relative;
+  top: 35%;
+  grid-row-start: 1;
+  grid-row-end: 2;
+} 
+
+.way-to-contact span{
+  width: 300%;
+}
+
+.way-to-contact-title{
+  font-size: larger;
+  font-weight: bold;
+}
+
+.way-to-contact-info{
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+
+.contact-me form{
+  position: relative;
+  right: 30%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(3, 80%);
+  row-gap: 20%;
+  column-gap: 8%;
+}
+
+.contact-me form > *{
+  border: none;
+  border-radius: 5px;
+  padding-left: 15px;
+}
+
+.wide-form-elements{
+  grid-column-start: 1;
+  grid-column-end: 3;
 }

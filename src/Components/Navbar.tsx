@@ -17,8 +17,8 @@ const Navbar = (props: Props) => {
         <a onClick={() => props.setTop(top => !top)}>Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        <a href="#services">Services</a>
-        <a href="#contact-me">Contact Me</a>
+        <a href="#roadmap">Road Map</a>
+        <a href="#contactme">Contact Me</a>
         <DarkMode setClassname={props.setClassname} navbarRef={navbarRef} />
       </nav>
     </div>

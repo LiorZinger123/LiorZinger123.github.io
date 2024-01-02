@@ -3,6 +3,8 @@ import Navbar from './Components/Navbar'
 import HomePage from './Components/HomePage'
 import About from './Components/About'
 import Skills from './Components/Skills'
+import RoadMap from './Components/RoadMap'
+import ContactMe from './Components/ContactMe'
 import './App.css'
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
       <HomePage />
       <About />
       <Skills />
+      <RoadMap />
+      <ContactMe />
     </div>
   )
 }

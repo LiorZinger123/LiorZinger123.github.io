@@ -15,11 +15,11 @@ const About = () => {
   }
 
   return (
-    <section className="about site-sections" id="about">
+    <section className="site-sections" id="about">
       
       <h1>About Me</h1>
       
-      <div className='about-info'>
+      <div className='section-info about-info'>
         
         <div className='about-img-div'>
           <img src={profile} className='about-img' />
