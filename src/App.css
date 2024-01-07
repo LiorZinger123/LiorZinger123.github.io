@@ -1,30 +1,31 @@
-/* GENERAL */
 h1{
   font-size: 40px;
   text-align: center;
 }
+@media screen and (min-width: 900px) {
+  .site-sections{
+    /* background-color: aqua;   */
+    height: 90%;
+  }  
+}
+
+@media screen and (max-width: 900px) {
+  .site-sections{
+    height: 95%;
+  }
+}
 
 .site-sections{
-  height: 85%;
+  /* position: relative; */
+  /* left: 3%; */
 }
 
 .site-icons{
   color: rgba(127, 73, 213, 0.822);
 }
 
-.section-info{
-  /* background-color: aqua; */
-  width: 75%;
-  height: 80%;
-  position: relative;
-  top: 38%;
-  left: 47%;
-  transform: translate(-50%, -50%);
-}
-
 .btn{
   display: flex;
-  height: max-content;
   border-radius: 5px;
   color: white;
   background-color: rgba(127, 73, 213, 0.822);
@@ -35,259 +36,4 @@ h1{
 
 .btn p{
   margin-left: 10%;
-}
-
-/* NAVBAR */
-.navbar{
-  background-color: white;
-  width: 100%;
-  height: 8%;
-  padding-top: 2%;
-  border-bottom: 1px solid rgba(127, 73, 213, 0.822);
-  position: relative;
-  top: 0;
-  position: sticky;
-  display: flex;
-  align-items: center;
-  z-index: 1;
-}
-
-.navbar-links{
-  display: flex;
-  align-self: center;
-  gap: 17%;
-}
-
-.navbar span{
-  margin-right: 40%;
-}
-
-.navbar a{
-  white-space: nowrap;
-  cursor: pointer;
-  color: black;
-  text-decoration: none;
-}
-
-/* HOME */
-.home-page{
-  height: 80%;
-  margin-top: 3%;
-  display: flex;
-  gap: 5%;
-}
-
-.home-page nav{
-  margin-top: 8%;
-  display: flex;
-  flex-direction: column;
-  gap: 8%;
-}
-
-.home-page nav a{
-  cursor: pointer;
-}
- 
-.home-page-aboutme{
-  width: 30%;
-}
-
-.home-page-introducing{
-  font-size: large;
-}
-
-.home-page-aboutme p{
-  word-break: keep-all;
-} 
-
-.contact-btn{
-  width: 45%;
-  /* height: 12%; */
-  margin-top: 10%;
-}
-
-.contact-btn-icon{
-  margin-top: 10%;
-  margin-left: 5%;
-}
-
-.scroll-down{
-  width: 45%;
-  margin-top: 20%;
-  display: flex;
-  flex-direction: row;
-  gap: 2%;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.scroll-down:visited{
-  color: black;
-}
-
-.scroll-down:hover{
-  position: relative;
-  top: 1%
-}
-
-.scroll-down-icon{
-  margin-top: 2%;
-}
-
-.profile-image{
-  margin-top: 1%;
-  margin-left: 3%;
-  width: 25%;
-  height: 60%;
-  border-radius: 50%;
-}
-
-/* ABOUT */
-.about-info{
-  display: flex;
-  gap: 5%;
-}
-
-.about-img-div{
-  width: 60%;
-}
-
-.about-img{
-  width: 80%;
-  height: 80%;
-  border-radius: 5px;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.about-context{
-  width: 50%;
-  word-break: keep-all;
-  display: flex;
-  flex-direction: column; 
-}
-
-.years{
-  display: flex;
-  gap: 15%;
-}
-
-.year{
-  width: min-content;
-  text-align: center;
-}
-
-.year span{
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.cv-btn{
-  width: 46%;
-  height: max-content;
-}
-
-.cv-btn-icon{
-  margin-top: 8%;
-  margin-left: 4%;
-}
-
-/* SKILLS */
-.selects{
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-items: center;
-  padding-top: 2%;
-}
-
-.select{
-  width: 65%;
-  height: fit-content;
-  border-radius: 15px;
-  box-shadow: 5px 5px 10px rgb(180, 163, 180);
-}
-
-.select-light-mode{
-  box-shadow: 5px 5px 10px rgb(180, 163, 180);
-}
-
-.select-dark-mode{
-  box-shadow: none;
-}
-
-.select-title{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 20%;
-  padding-left: 2%;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-/* CONTACT ME */
-.contact-me{
-  /* width: 75%; */
-  background-color: aquamarine;
-  display: flex;
-  justify-content: space-around;
-  padding-top: 2%;
-}
-
-.ways-to-contact{
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  gap: 5%;
-}
-
-.way-to-contact{
-  display: grid;
-  grid-template-columns: repeat(2, 15%);
-  grid-template-rows: auto auto;
-}
-
-.way-to-contact-icon{
-  position: relative;
-  top: 35%;
-  grid-row-start: 1;
-  grid-row-end: 2;
-} 
-
-.way-to-contact span{
-  width: 300%;
-}
-
-.way-to-contact-title{
-  font-size: larger;
-  font-weight: bold;
-}
-
-.way-to-contact-info{
-  grid-row-start: 2;
-  grid-column-start: 2;
-}
-
-.contact-me form{
-  position: relative;
-  right: 30%;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: repeat(3, 80%);
-  row-gap: 20%;
-  column-gap: 8%;
-}
-
-.contact-me form > *{
-  border: none;
-  border-radius: 5px;
-  padding-left: 15px;
-}
-
-.wide-form-elements{
-  grid-column-start: 1;
-  grid-column-end: 3;
 }

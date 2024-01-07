@@ -1,6 +1,7 @@
 import profile from '../Sources//profile_img.jpg'
 import cv from '../Sources/Lior Singer - CV.pdf'
 import { PiDownloadSimpleBold } from "react-icons/pi";
+import '../css/About.css'
 
 const About = () => {
 
@@ -15,11 +16,11 @@ const About = () => {
   }
 
   return (
-    <section className="site-sections" id="about">
+    <section className="site-sections about" id="about">
       
       <h1>About Me</h1>
       
-      <div className='section-info about-info'>
+      <div className='about-info'>
         
         <div className='about-img-div'>
           <img src={profile} className='about-img' />

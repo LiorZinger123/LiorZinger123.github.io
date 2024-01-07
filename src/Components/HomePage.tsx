@@ -5,6 +5,7 @@ import { LuInstagram } from "react-icons/lu";
 import { FaFacebook } from "react-icons/fa";
 import { BsMouse } from "react-icons/bs";
 import { IoMdArrowDown } from "react-icons/io";
+import '../css/homepage.css' 
 
 const HomePage = () => {
 

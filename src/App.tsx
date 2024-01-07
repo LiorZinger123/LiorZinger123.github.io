@@ -3,7 +3,7 @@ import Navbar from './Components/Navbar'
 import HomePage from './Components/HomePage'
 import About from './Components/About'
 import Skills from './Components/Skills'
-import RoadMap from './Components/RoadMap'
+import Timeline from './Components/Timeline'
 import ContactMe from './Components/ContactMe'
 import './App.css'
 
@@ -23,7 +23,7 @@ function App() {
       <HomePage />
       <About />
       <Skills />
-      <RoadMap />
+      {/* <Timeline /> */}
       <ContactMe />
     </div>
   )
