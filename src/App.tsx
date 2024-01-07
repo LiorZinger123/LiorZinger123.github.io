@@ -5,6 +5,7 @@ import About from './Components/About'
 import Skills from './Components/Skills'
 import Timeline from './Components/Timeline'
 import ContactMe from './Components/ContactMe'
+import HomeButton from './Components/HomeButton'
 import './App.css'
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Skills />
       {/* <Timeline /> */}
       <ContactMe />
+      <HomeButton setTop={setTop} />
     </div>
   )
 }

@@ -1,0 +1,41 @@
+@media screen and (min-width: 900px){
+    .home-btn{
+        bottom: 5%;
+        left: 94%;
+        width: 50px;
+        height: 10%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .home-btn{
+        transform: translateY(-50%);
+        left: 92%;
+        width: 7%;
+        height: 10%;
+    }
+}
+
+
+.home-btn{
+    position: sticky;
+    color: white;
+    background-color: rgba(127, 73, 213, 0.822);
+    border-radius: 5px;
+    cursor: pointer;
+    animation: movebtn 2s infinite;
+}
+
+@keyframes movebtn{
+    0% { bottom: 5%; }
+    50% { bottom: 6%; }
+    100% { bottom: 5%; }
+}
+
+.arrow-up{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}

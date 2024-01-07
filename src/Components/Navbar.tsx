@@ -18,14 +18,14 @@ const Navbar = (props: Props) => {
     <div className="navbar" ref={navbarRef}>
       <span className="navbar-name">LIOR</span>
       <nav className="navbar-links">
-        <a onClick={() => props.setTop(top => !top)}>Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#roadmap">Road Map</a>
-        <a href="#contactme">Contact Me</a>
+        <a className='top-navbar-links' onClick={() => props.setTop(top => !top)}>Home</a>
+        <a className='top-navbar-links' href="#about">About</a>
+        <a className='top-navbar-links' href="#skills">Skills</a>
+        <a className='top-navbar-links' href="#timleline">Timeline</a>
+        <a className='top-navbar-links' href="#contactme">Contact Me</a>
         <DarkMode setClassname={props.setClassname} navbarRef={navbarRef} />
         <span className="navbar-menu" onClick={() => setMenu(!menu)}><IoIosMenu size={30} /></span>
-        {menu && <NavbarMenu />}
+        {menu && <NavbarMenu setMenu={setMenu} />}
       </nav>
     </div>
   )

@@ -4,7 +4,6 @@ h1{
 }
 @media screen and (min-width: 900px) {
   .site-sections{
-    /* background-color: aqua;   */
     height: 90%;
   }  
 }
@@ -13,11 +12,6 @@ h1{
   .site-sections{
     height: 95%;
   }
-}
-
-.site-sections{
-  /* position: relative; */
-  /* left: 3%; */
 }
 
 .site-icons{
