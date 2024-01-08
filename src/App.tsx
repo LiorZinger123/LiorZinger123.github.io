@@ -24,7 +24,7 @@ function App() {
       <HomePage />
       <About />
       <Skills />
-      {/* <Timeline /> */}
+      <Timeline />
       <ContactMe />
       <HomeButton setTop={setTop} />
     </div>

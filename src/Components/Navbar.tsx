@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import DarkMode from "./DarkMode";
 import { IoIosMenu } from "react-icons/io";
+import { IoCloseSharp } from "react-icons/io5";
 import NavbarMenu from "./NavbarMenu";
 import '../css/Navbar.css'
 
@@ -16,15 +17,16 @@ const Navbar = (props: Props) => {
 
   return (
     <div className="navbar" ref={navbarRef}>
-      <span className="navbar-name">LIOR</span>
+      {!menu && <span className="navbar-name">LIOR</span>}
       <nav className="navbar-links">
         <a className='top-navbar-links' onClick={() => props.setTop(top => !top)}>Home</a>
         <a className='top-navbar-links' href="#about">About</a>
         <a className='top-navbar-links' href="#skills">Skills</a>
-        <a className='top-navbar-links' href="#timleline">Timeline</a>
+        <a className='top-navbar-links' href="#timeline">Timeline</a>
         <a className='top-navbar-links' href="#contactme">Contact Me</a>
-        <DarkMode setClassname={props.setClassname} navbarRef={navbarRef} />
-        <span className="navbar-menu" onClick={() => setMenu(!menu)}><IoIosMenu size={30} /></span>
+        {!menu && <DarkMode setClassname={props.setClassname} navbarRef={navbarRef} />}
+        {!menu &&<span className="navbar-menu" onClick={() => setMenu(true)}><IoIosMenu size={30} /></span>}
+        {menu && <IoCloseSharp className='navbar-menu' onClick={() => setMenu(false)} />}
         {menu && <NavbarMenu setMenu={setMenu} />}
       </nav>
     </div>

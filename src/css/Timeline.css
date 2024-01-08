@@ -3,42 +3,47 @@
     height: 83%;
     position: relative;
     bottom: 5%;
-    background-color: aqua;
+    color: white;
 }
-/* 
+
 .timeline{
-    background-color: rgba(127, 73, 213, 0.822);;
-    width: 2px;
-    height: 60%;
+    background-color: rgba(127, 73, 213, 0.822);
+    width: 3px;
+    height: 80%;
     position: relative;
-    top: 12%;
+    top: 4%;
     left: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-} */
+}
 
 .timeline-stops{
-    height: 60%;
-    position: relative;
+    height: fit-content;
+    position: absolute;
     top: 5%;
-    left: 54%;
+    left: 46%;
+    /* transform: translate(50%, -50%); */
+}
+
+.timeline-stop{
+    display: flex;
 }
 
 .point{
-    background-color: rgba(127, 73, 213, 0.822);
+    background-color: white;
+    position: relative;
+    top: 15px;
+    /* right: 1%; */
     width: 20px;
     height: 20px;
     border-radius: 50%;
+    border: 5px solid rgba(127, 73, 213, 0.822);
 }
 
 .stop-info{
-    background-color: aquamarine;
-    width: 60%;
+    background-color: rgb(127, 73, 213);
+    width: 55%;
     display: flex;
     flex-direction: column;
-    position: relative;
-    top: 20%;
+    border: 1px solid rgb(127, 73, 213);
 }
 
 .stop-title{
@@ -47,7 +52,40 @@
     margin-bottom: 5%;
 }
 
+.stop-info-to-right{
+    position: relative;
+    left: 7%;
+    padding-left: 5%;
+}
+
+.stop-info.stop-info-to-right::before{
+    background-color: rgb(127, 73, 213);
+    content: "";
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: -10px;
+    top: 20px;
+    transform: rotate(45deg);
+    border-bottom: 1px solid rgb(127, 73, 213);
+    border-left: 1px solid rgb(127, 73, 213);
+}
+
 .stop-info-to-left{
     position: relative;
-    right: 100%;
+    right: 72%;
+    padding-left: 3%;
+}
+
+.stop-info.stop-info-to-left::before{
+    background-color: rgb(127, 73, 213);
+    content: "";
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: -10px;
+    top: 20px;
+    transform: rotate(45deg);
+    border-top: 1px solid rgb(127, 73, 213);
+    border-right: 1px solid rgb(127, 73, 213);
 }
