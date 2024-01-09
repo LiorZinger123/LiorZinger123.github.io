@@ -3,6 +3,8 @@ import { FaHome } from 'react-icons/fa'
 import { CgProfile } from 'react-icons/cg'
 import { FaReact } from 'react-icons/fa'
 import { BiSolidContact } from 'react-icons/bi' 
+import { TbTimelineEventFilled } from "react-icons/tb";
+import { GrCircleInformation } from "react-icons/gr";
 
 type Props = {
   setMenu: React.Dispatch<React.SetStateAction<boolean>>
@@ -32,12 +34,17 @@ const NavbarMenu = (props: Props) => {
           <FaReact className='menu-navbar-icon' />
           <a href='#skills'>Skills</a>
         </div>
-        <div><a href='#timeline'>Timeline</a></div>
+        <div>
+          <TbTimelineEventFilled className='menu-navbar-icon' />          
+          <a href='#timeline'>Timeline</a></div>
         <div>
           <BiSolidContact className='menu-navbar-icon' />
           <a href='#contactme'>Contact Me</a>
         </div>
-        <div><a>kjebvk</a></div>
+        <div>
+          <GrCircleInformation className='menu-navbar-icon' />
+          <a>About Me</a>
+        </div>
     </div>
   )
 }

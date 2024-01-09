@@ -1,0 +1,144 @@
+.timeline {
+    width: 100%;
+    position: relative;
+  }
+  
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: rgba(127, 73, 213, 0.822);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 30%;
+}
+  
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid rgba(127, 73, 213, 0.822);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+.left {
+    left: 13%;
+  }
+
+.right{ 
+    left: 50%; 
+} 
+  
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent rgba(127, 73, 213, 0.822);;
+  }
+  
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgba(127, 73, 213, 0.822) transparent transparent;
+  }
+
+  .right::after {
+    left: -16px;
+  }
+  
+  .content {
+    background-color: rgba(127, 73, 213, 0.822);
+    padding: 20px 30px;
+    position: relative;
+    border-radius: 6px;
+    display: grid;
+    grid-template-columns: 40px 80%;
+    grid-template-rows: repeat(2, 35px);
+    color: white;
+}
+
+  .content-title{
+    font-weight: bold;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .content-icon{
+    font-size: 25px;
+  }
+
+  @media screen and (min-width: 650px) and (max-width: 1000px) {
+
+    .timeline-section{
+        margin-bottom: 150px;
+    }
+
+    .content{
+        grid-template-rows: 40px;
+    }
+}
+
+  @media screen and (max-width: 650px) {
+
+    .timeline-section{
+        margin-bottom: 300px;
+    }
+    
+    .timeline::after {
+        left: 31px;
+      }
+    
+      .container {
+        width: fit-content;
+        padding-left: 70px;
+      }
+    
+      .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+    
+      .left::after, .right::after {
+        left: 15px;
+      }
+    
+      .right {
+        left: 0;
+      }
+
+      .left{
+        left: 0;
+      }
+
+      .content{
+        grid-template-rows: repeat(2, 80px);
+      }
+    }

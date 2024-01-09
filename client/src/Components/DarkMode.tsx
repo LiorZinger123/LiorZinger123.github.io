@@ -1,22 +1,22 @@
-import React, { useState } from "react"
+import React from "react"
 import { LuMoon } from "react-icons/lu";
 import { MdOutlineWbSunny } from "react-icons/md";
 
 type Props = {
-    setClassname: React.Dispatch<React.SetStateAction<string>>
-    navbarRef: React.MutableRefObject<HTMLDivElement>
+    setClassname: React.Dispatch<React.SetStateAction<string>>,
+    navbarRef: React.MutableRefObject<HTMLDivElement>,
+    counter: number,
+    setCounter: React.Dispatch<React.SetStateAction<number>>
 }
 
 const DarkMode = (props: Props) => {
 
-    const [counter, setCounter] = useState<number>(0)
-    
     const changeMode = (): void => {
 
         const links = [...document.getElementsByTagName('a')]
         const selects = [...document.getElementsByClassName("select")]
         
-        if(counter % 2 !== 0){
+        if(props.counter % 2 !== 0){
         document.body.classList.remove('dark-mode')
         document.body.classList.add("light-mode")
         selects.forEach(select => {
@@ -40,13 +40,13 @@ const DarkMode = (props: Props) => {
         links.forEach(a => a.style.color = 'white')
         }
         
-        setCounter(counter => counter += 1)
+        props.setCounter(counter => counter += 1)
     }
 
   return (
     <>
         <span className="dark-mode-icon" onClick={changeMode}>
-          {counter % 2 === 0 ? <LuMoon size={20} /> : <MdOutlineWbSunny />}
+          {props.counter % 2 === 0 ? <LuMoon size={20} /> : <MdOutlineWbSunny />}
         </span>
     </>
   )

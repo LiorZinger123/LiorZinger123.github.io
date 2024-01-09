@@ -13,6 +13,7 @@ type Props = {
 const Navbar = (props: Props) => {
 
   const [menu, setMenu] = useState<boolean>(false)
+  const [counter, setCounter] = useState<number>(0)
   const navbarRef = useRef<HTMLDivElement>(null!)
 
   return (
@@ -24,7 +25,7 @@ const Navbar = (props: Props) => {
         <a className='top-navbar-links' href="#skills">Skills</a>
         <a className='top-navbar-links' href="#timeline">Timeline</a>
         <a className='top-navbar-links' href="#contactme">Contact Me</a>
-        {!menu && <DarkMode setClassname={props.setClassname} navbarRef={navbarRef} />}
+        {!menu && <DarkMode setClassname={props.setClassname} navbarRef={navbarRef} counter={counter} setCounter={setCounter} />}
         {!menu &&<span className="navbar-menu" onClick={() => setMenu(true)}><IoIosMenu size={30} /></span>}
         {menu && <IoCloseSharp className='navbar-menu' onClick={() => setMenu(false)} />}
         {menu && <NavbarMenu setMenu={setMenu} />}
