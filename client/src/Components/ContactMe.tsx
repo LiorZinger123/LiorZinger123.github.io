@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import api from '../Api';
 import { BsTelephone } from 'react-icons/bs'
 import { IoMailOutline } from 'react-icons/io5'
 import { GrLocation } from "react-icons/gr";
@@ -16,6 +17,18 @@ const ContactMe = () => {
     const location = {icon: <GrLocation size={30} className="site-icons way-to-contact-icon" />, title: "Location", info: "Hasahlav 14 Street, Haifa, Israel"}
     const ways_to_contact = [call, mail, location]
 
+    const handleSend = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
+        e.preventDefault()
+        try{
+            const data = {name: name, phone: phone, mail: mail, msg: msg}
+            const res = await api('send', data)
+            console.log(res)
+        }
+        catch(e){
+            throw e
+        }
+    }
+
   return (
     <section className='site-sections' id="contactme">
         <h1>Contact Me</h1>
@@ -32,7 +45,7 @@ const ContactMe = () => {
             </div>
             
             <div>
-                <form>
+                <form onSubmit={handleSend}>
                     <input type='text' name="name" id="name" value={name} onChange={e => setName(e.target.value)} placeholder='Name' required/>
                     <input type='tel' name="phone" id="phone" value={phone} onChange={e => setPhone(e.target.value)}
                         placeholder='Phone' pattern="[0-9]{3}-[0-9]{7}" required />
