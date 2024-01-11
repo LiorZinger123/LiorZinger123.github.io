@@ -4,7 +4,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        margin-left: 12%;
+        /* margin-left: 12%; */
+    }
+
+    .select{
+      width: 100%;
     }
 }
 
@@ -16,13 +20,17 @@
       justify-items: center;
       padding-top: 5%;
     }
+
+    .select{
+      width: 70%;
+    }
 }
 
 @media screen and (max-width: 700px) {
     
   .selects{
     margin-top: 20%;
-    margin-left: 10%;
+    /* margin-left: 10%; */
   }
 
   .select li{
@@ -48,7 +56,6 @@
 }
 
 .select{
-    width: 70%;
     height: fit-content;
     border-radius: 15px;
     box-shadow: 5px 5px 10px rgb(180, 163, 180);

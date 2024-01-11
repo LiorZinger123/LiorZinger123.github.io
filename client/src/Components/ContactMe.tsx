@@ -12,6 +12,7 @@ const ContactMe = () => {
     const [phone, setPhone] = useState<string>('')
     const [mailState, setMailState] = useState<string>('')
     const [msg, setmsg] = useState<string>('')
+    // const [formMsg, setFormMsg] = useState<string>('')
     const call = {icon: <BsTelephone size={30} className="site-icons way-to-contact-icon" />, title: "Call Me", info: "052-8037971"}
     const mail = {icon: <IoMailOutline size={30} className="site-icons  way-to-contact-icon" />, title: "Mail", info: "liorzinger123@gmail.com"}
     const location = {icon: <GrLocation size={30} className="site-icons way-to-contact-icon" />, title: "Location", info: "Hasahlav 14 Street, Haifa, Israel"}
@@ -20,9 +21,14 @@ const ContactMe = () => {
     const handleSend = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
         e.preventDefault()
         try{
-            const data = {name: name, phone: phone, mail: mail, msg: msg}
+            const data = {name: name, phone: phone, mail: mailState, msg: msg}
             const res = await api('send', data)
-            console.log(res)
+            if(res.status === 201){
+                setName('')
+                setPhone('')
+                setMailState('')
+                setmsg('')
+            }
         }
         catch(e){
             throw e
@@ -45,6 +51,7 @@ const ContactMe = () => {
             </div>
             
             <div>
+                {/* {<p></p>} */}
                 <form onSubmit={handleSend}>
                     <input type='text' name="name" id="name" value={name} onChange={e => setName(e.target.value)} placeholder='Name' required/>
                     <input type='tel' name="phone" id="phone" value={phone} onChange={e => setPhone(e.target.value)}

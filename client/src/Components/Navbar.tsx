@@ -25,6 +25,7 @@ const Navbar = (props: Props) => {
         <a className='top-navbar-links' href="#skills">Skills</a>
         <a className='top-navbar-links' href="#timeline">Timeline</a>
         <a className='top-navbar-links' href="#contactme">Contact Me</a>
+        <a className='top-navbar-links' href="#aboutme">About Me</a>
         {!menu && <DarkMode setClassname={props.setClassname} navbarRef={navbarRef} counter={counter} setCounter={setCounter} />}
         {!menu &&<span className="navbar-menu" onClick={() => setMenu(true)}><IoIosMenu size={30} /></span>}
         {menu && <IoCloseSharp className='navbar-menu' onClick={() => setMenu(false)} />}

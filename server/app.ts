@@ -1,10 +1,11 @@
 import express from 'express'
 import cors from 'cors'
-import router from './src/router'
+import router from './src/messages/router'
+import options from './corsOptions'
 
 const app = express()
 
-app.use(cors)
+app.use(cors(options))
 app.use(express.json())
 app.use(router)
 

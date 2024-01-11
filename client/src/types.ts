@@ -7,3 +7,10 @@ export type Select = {
     state: boolean,
     stateFunc: React.Dispatch<React.SetStateAction<boolean>>
 }
+
+export type SendData = {
+    name: string, 
+    phone: string,
+    mail: string,
+    msg: string
+}

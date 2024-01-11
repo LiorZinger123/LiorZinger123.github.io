@@ -6,6 +6,7 @@ import Skills from './Components/Skills'
 import Timeline from './Components/Timeline'
 import ContactMe from './Components/ContactMe'
 import HomeButton from './Components/HomeButton'
+import AboutMe from './Components/AboutMe'
 import './App.css'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <Skills />
       <Timeline />
       <ContactMe />
+      <AboutMe />
       <HomeButton setTop={setTop} />
     </div>
   )

@@ -1,7 +1,7 @@
 import 'dotenv/config.js'
 
 const port = process.env.PORT
-const mail = process.env.MAIL
-const pass = process.env.PASS
+const origin = process.env.ORIGIN
+const url = process.env.URL
 
-export { port, mail, pass }
+export { port, origin, url }
