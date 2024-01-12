@@ -12,16 +12,18 @@ type Props = {
 
 const NavbarMenu = (props: Props) => {
 
-  const navRef = useRef<HTMLDivElement>(null!)
+  const navRef = useRef<HTMLDivElement>(null)
+  
   
   useEffect((): void => {
-    navRef.current.addEventListener('click', (): void => {
+    navRef.current?.addEventListener('click', (): void => {
       props.setMenu(false)
+      navRef.current?.classList.add('hide-navbar-menu-list')
     })
   }, [])
 
   return (
-    <div className='navbar-menu-list' ref={navRef}>
+    <div className='navbar-menu-list hide-navbar-menu-list' id='navbar-menu-list' ref={navRef}>
         <div>
           <FaHome className='menu-navbar-icon' />
           <a href='#home'>Home</a>
@@ -43,7 +45,7 @@ const NavbarMenu = (props: Props) => {
         </div>
         <div>
           <GrCircleInformation className='menu-navbar-icon' />
-          <a>About Me</a>
+          <a href='#aboutme'>About Me</a>
         </div>
     </div>
   )

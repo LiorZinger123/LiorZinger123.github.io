@@ -21,7 +21,10 @@ const AboutMe = () => {
                 <a href='https://www.linkedin.com/in/lior-singer-141982244' target="_blank"><SlSocialLinkedin size={25} className="footer-icons" /></a>
                 <a href='https://www.instagram.com/liorzinger09/' target="_blank"><LuInstagram size={25} className="footer-icons" /></a>            
             </div>
-        </div>   
+        </div>
+        <div className="copyright">
+            <p>&copy; 2024 LIOR SINGER</p>
+        </div>
     </footer>
   )
 }

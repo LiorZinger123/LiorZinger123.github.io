@@ -1,25 +1,102 @@
+@media screen and (min-width: 900px) {
+    .about-me{
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-info{
+        width: 65%;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        gap: 50px;
+    }
+
+    .footer-container{
+        width: 35%;
+    }
+
+    .footer-info-center{
+        display: flex;
+        justify-content: center;
+        gap: 10%;
+        color: white;
+    }
+
+    .footer-info-right{
+        justify-content: center;
+        gap: 10%;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+    .about-me{
+        height: 75%;
+    }
+
+    .footer-info{
+        width: 100%;
+        top: 7%;
+        left: 7%;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 60%);
+    }
+
+    .footer-container{
+        width: 60%;
+    }
+
+    .footer-info-center{
+        display: flex;
+        flex-direction: column;
+        gap: 20%;
+    }
+
+    .footer-info-right{
+        gap: 10%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .about-me{
+        height: 100%;
+        margin-top: 250px;
+    }
+
+    .footer-info{
+        width: 100%;
+        top: 7%;
+        left: 7%;
+        display: flex;
+        flex-direction: column;
+        gap: 12%;
+    }
+
+    .footer-info-center{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-info-right{
+        gap: 5%;
+    }
+}
+
 .about-me{
     position: relative;
     top: 50px;
     background-color: rgba(127, 73, 213, 0.822);
     width: 100%;
-    height: 40%;
 }
 
 .footer-info{
-    position: relative;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 65%;
     height: 80%;
+    position: relative;
     color: white;
-    display: flex;
-    gap:  50px;
-}
-
-.footer-container{
-    width: 35%;
 }
 
 .footer-info-title{
@@ -32,13 +109,6 @@
     flex-direction: column;
 }
 
-.footer-info-center{
-    display: flex;
-    justify-content: center;
-    gap: 10%;
-    color: white;
-}
-
 .footer-info-center a{
     text-decoration: none;
     color: white;
@@ -46,10 +116,14 @@
 
 .footer-info-right{
     display: flex;
-    justify-content: end;
-    gap: 10%;
 }
 
 .footer-icons{
+    color: white;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
     color: white;
 }

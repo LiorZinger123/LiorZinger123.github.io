@@ -16,7 +16,7 @@ const DarkMode = (props: Props) => {
         const links = [...document.getElementsByTagName('a')]
         const selects = [...document.getElementsByClassName("select")]
         
-        if(props.counter % 2 !== 0){
+        if(props.counter % 2 === 0){
         document.body.classList.remove('dark-mode')
         document.body.classList.add("light-mode")
         selects.forEach(select => {

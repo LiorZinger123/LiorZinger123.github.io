@@ -13,8 +13,24 @@ type Props = {
 const Navbar = (props: Props) => {
 
   const [menu, setMenu] = useState<boolean>(false)
-  const [counter, setCounter] = useState<number>(0)
+  const [counter, setCounter] = useState<number>(1)
   const navbarRef = useRef<HTMLDivElement>(null!)
+
+  const handleOpen = (): void => {
+    const navbarMenuListEl = document.getElementById('navbar-menu-list')
+    navbarMenuListEl?.classList.remove('hide-navbar-menu-list')
+    navbarMenuListEl?.setAttribute("style","height: 100px;")
+    setMenu(true)
+  }
+
+  const handleClose = (): void => {
+    const navbarMenuListEl = document.getElementById('navbar-menu-list')
+    navbarMenuListEl?.setAttribute("style","height: 0;")
+    setMenu(false)
+    setTimeout((): void => {
+      navbarMenuListEl?.classList.add('hide-navbar-menu-list')
+    }, 1000)
+  }
 
   return (
     <div className="navbar" ref={navbarRef}>
@@ -27,9 +43,9 @@ const Navbar = (props: Props) => {
         <a className='top-navbar-links' href="#contactme">Contact Me</a>
         <a className='top-navbar-links' href="#aboutme">About Me</a>
         {!menu && <DarkMode setClassname={props.setClassname} navbarRef={navbarRef} counter={counter} setCounter={setCounter} />}
-        {!menu &&<span className="navbar-menu" onClick={() => setMenu(true)}><IoIosMenu size={30} /></span>}
-        {menu && <IoCloseSharp className='navbar-menu' onClick={() => setMenu(false)} />}
-        {menu && <NavbarMenu setMenu={setMenu} />}
+        {!menu &&<span className="navbar-menu" onClick={handleOpen}><IoIosMenu size={30} /></span>}
+        {menu && <IoCloseSharp className='navbar-menu' onClick={handleClose} />}
+        <NavbarMenu setMenu={setMenu} />
       </nav>
     </div>
   )
