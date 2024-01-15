@@ -1,11 +1,11 @@
-import profile from '../Sources/profile_img.jpg'
+import profile from './Sources/profile_img.jpg'
 import { VscSend } from "react-icons/vsc";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { LuInstagram } from "react-icons/lu";
 import { FaFacebook } from "react-icons/fa";
 import { BsMouse } from "react-icons/bs";
 import { IoMdArrowDown } from "react-icons/io";
-import '../css/homepage.css' 
+import './HomePage.css' 
 
 const HomePage = () => {
 

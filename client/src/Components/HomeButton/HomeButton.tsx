@@ -1,5 +1,5 @@
 import { IoArrowUpOutline } from "react-icons/io5";
-import '../css/HomeButton.css'
+import './HomeButton.css'
 
 type Props = {
     setTop: React.Dispatch<React.SetStateAction<boolean>>

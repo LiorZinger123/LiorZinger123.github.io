@@ -1,7 +1,7 @@
 import { FaFacebook } from 'react-icons/fa'
 import { LuInstagram } from 'react-icons/lu'
 import { SlSocialLinkedin } from 'react-icons/sl'
-import '../css/AboutMe.css'
+import './AboutMe.css'
 
 const AboutMe = () => {
   return (

@@ -75,7 +75,7 @@
         display: grid;
         grid-template-columns: repeat(3, 33.2%);
         grid-template-rows: repeat(2, 50%);
-        transition: height 1s ease-in-out;
+        transition: height 1s ease;
     }
 
     .hide-navbar-menu-list{

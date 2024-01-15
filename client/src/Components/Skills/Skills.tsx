@@ -3,8 +3,8 @@ import { IoServerOutline } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoLogoReact } from "react-icons/io5";
 import { GrServers } from "react-icons/gr";
-import { Select } from "../types";
-import '../css/Skills.css'
+import { Select } from "../Types/types";
+import './Skills.css'
 
 const Skills = () => {
 

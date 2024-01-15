@@ -23,6 +23,13 @@
         padding-left: 15px;
     }
 
+    .close-api-msg{
+      font-size: 20px;
+      position: relative;
+      bottom: 10px;
+      left: 3px;
+    }
+
     .send-btn{
         left: 63%;
     }
@@ -46,6 +53,12 @@
 
     .contact-me form > *:not(:last-child) {
         padding-left: 15px;
+    }
+
+    .close-api-msg{
+      font-size: 30px;
+      position: relative;
+      bottom: 20px;
     }
 
     .send-btn{
@@ -96,6 +109,13 @@
         width: 90%;
         height: 50px;
         margin-bottom: 20px;
+    }
+
+    .close-api-msg{
+      font-size: 20px;
+      position: sticky;
+      bottom: 10px;
+      left: 15%;
     }
 
     .send-btn{
@@ -164,6 +184,27 @@
     outline: none;
     border-radius: 5px;
   }
+
+  .api-msg{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .api-msg-green{
+    color: rgb(42, 198, 42);
+  }
+
+  .api-msg-red{
+    color: tomato;
+  }
+
+  .close-api-msg{
+    cursor: pointer;
+  }
   
   .wide-form-elements{
     grid-column-start: 1;
@@ -174,7 +215,7 @@
     resize: none;
     padding-top: 2%;
   }
-  
+
   .send-btn{
     font-family: "Poppins";
     font-size: large;

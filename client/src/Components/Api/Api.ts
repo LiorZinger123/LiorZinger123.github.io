@@ -1,4 +1,4 @@
-import { SendData } from "./types"
+import { SendData } from "../Types/types"
 
 const api = async (url: string, data: SendData): Promise<Response> => {
     try{

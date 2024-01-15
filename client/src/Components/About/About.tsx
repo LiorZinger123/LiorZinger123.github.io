@@ -1,7 +1,7 @@
-import profile from '../Sources//profile_img.jpg'
-import cv from '../Sources/Lior Singer - CV.pdf'
+import profile from './Sources/profile_img.jpg'
+import cv from './Sources/Lior Singer - CV.pdf'
 import { PiDownloadSimpleBold } from "react-icons/pi";
-import '../css/About.css'
+import './About.css'
 
 const About = () => {
 

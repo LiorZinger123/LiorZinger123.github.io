@@ -1,13 +1,17 @@
 import { useState } from 'react'
-import api from '../Api';
+import api from '../Api/Api';
+import { apiMsgType } from '../Types/types';
 import { BsTelephone } from 'react-icons/bs'
 import { IoMailOutline } from 'react-icons/io5'
 import { GrLocation } from "react-icons/gr";
 import { VscSend } from 'react-icons/vsc'
-import '../css/ContactMe.css'
+import { IoCloseSharp } from "react-icons/io5";
+import './ContactMe.css'
 
 const ContactMe = () => {
 
+    const [apiMsg, setApiMsg] = useState<apiMsgType>({ show: false, msg: '' })
+    const [apiMsgClass, setApiMsgClass] = useState<string>('api-msg')
     const [name, setName] = useState<string>('')
     const [phone, setPhone] = useState<string>('')
     const [mailState, setMailState] = useState<string>('')
@@ -27,10 +31,17 @@ const ContactMe = () => {
                 setPhone('')
                 setMailState('')
                 setmsg('')
+                setApiMsg({show: true, msg: 'The message was sent successfully'})
+                setApiMsgClass('api-msg api-msg-green')
+            }
+            else{
+                setApiMsg({show: true, msg: 'The message was not sent successfully. Please try again'})
+                setApiMsgClass('api-msg api-msg-red')
             }
         }
         catch(e){
-            throw e
+            setApiMsg({show: true, msg: 'The message was not sent successfully'})
+            setApiMsgClass('api-msg api-msg-red')
         }
     }
 
@@ -50,7 +61,6 @@ const ContactMe = () => {
             </div>
             
             <div>
-                {/* {<p></p>} */}
                 <form onSubmit={handleSend}>
                     <input type='text' name="name" id="name" value={name} onChange={e => setName(e.target.value)} placeholder='Name'
                     pattern="([a-zA-Z]{2,})|([a-zA-Z])+\s([a-zA-Z])+" required/>
@@ -60,6 +70,8 @@ const ContactMe = () => {
                         placeholder='Mail' className='wide-form-elements' pattern='[^@]+@[^@]+\.[a-zA-Z]{2,6}' required />
                     <textarea name='msg' id='msg' value={msg} onChange={e => setmsg(e.target.value)} rows={4} cols={20}
                         placeholder='Message' className='wide-form-elements' required />   
+                    {apiMsg.show && <p className={`api-msg ${apiMsgClass}`}> {apiMsg.msg}<IoCloseSharp className='close-api-msg'
+                    onClick={() => setApiMsg({show: false, msg: ''})} /></p>}
                     <button className='btn send-btn'>
                         <p>Send Me</p>
                         <span><VscSend className="send-btn-icon wide-form-elements" /></span>

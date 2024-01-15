@@ -1,9 +1,9 @@
 import { useState, useRef } from "react";
-import DarkMode from "./DarkMode";
+import DarkMode from "../DarkMode/DarkMode";
 import { IoIosMenu } from "react-icons/io";
 import { IoCloseSharp } from "react-icons/io5";
 import NavbarMenu from "./NavbarMenu";
-import '../css/Navbar.css'
+import './Navbar.css'
 
 type Props = {
   setClassname: React.Dispatch<React.SetStateAction<string>>

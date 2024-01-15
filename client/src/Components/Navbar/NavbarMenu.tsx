@@ -14,7 +14,6 @@ const NavbarMenu = (props: Props) => {
 
   const navRef = useRef<HTMLDivElement>(null)
   
-  
   useEffect((): void => {
     navRef.current?.addEventListener('click', (): void => {
       props.setMenu(false)

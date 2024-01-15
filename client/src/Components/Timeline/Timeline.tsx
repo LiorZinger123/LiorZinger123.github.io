@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { MdCalendarMonth } from "react-icons/md";
-import '../css/Timeline.css'
+import './Timeline.css'
 
 const Timeline = () => {
 
@@ -8,7 +8,6 @@ const Timeline = () => {
   const stops_infos = [{title: "Full Stack", years: "January 2022 - December 2023"},
                       {title: "IT Administrator", years: "April 2020 - January 2022"},
                       {title: "TMM Course", years: "May 2020 - August 2020"}]
-                      // {title: "Alliance High School", years: "September 2016 - July 2019"}]            
 
   return (
     <section className='timeline-section site-sections' id="timeline">

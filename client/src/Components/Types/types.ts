@@ -14,3 +14,8 @@ export type SendData = {
     mail: string,
     msg: string
 }
+
+export type apiMsgType = {
+    show: boolean,
+    msg: string
+}
