@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import router from './src/messages/router'
+import router from './src/router'
 import options from './corsOptions'
 
 const app = express()

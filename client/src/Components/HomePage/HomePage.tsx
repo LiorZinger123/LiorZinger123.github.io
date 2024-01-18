@@ -25,10 +25,10 @@ const HomePage = () => {
           High level expirience in full stack development, producing quality work.
         </p>
 
-        <div className='btn contact-btn'>
+        <a href="#contactme"className='btn contact-btn'>
           <p>Contact Me</p>
           <span className='contact-btn-icon'><VscSend size={25} /></span>
-        </div>
+        </a>
         
         <a href='#about' className='scroll-down'>
           <BsMouse size={25} />

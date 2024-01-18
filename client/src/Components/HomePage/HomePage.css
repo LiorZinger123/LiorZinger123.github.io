@@ -73,7 +73,6 @@
         grid-template-columns: repeat(2, 20%);
         grid-template-rows: repeat(3, 30%);
         position: relative;
-        /* left: 10%; */
     }
     
     .home-page-aboutme{
@@ -119,6 +118,7 @@
 
 .contact-btn{
     width: 150px;
+    text-decoration: none;
 }
 
 .contact-btn-icon{

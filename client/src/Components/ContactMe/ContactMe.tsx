@@ -26,7 +26,7 @@ const ContactMe = () => {
         try{
             const data = {name: name, phone: phone, mail: mailState, msg: msg}
             const res = await api('send', data)
-            if(res.status === 201){
+            if(res.status === 200){
                 setName('')
                 setPhone('')
                 setMailState('')
@@ -64,15 +64,20 @@ const ContactMe = () => {
                 <form onSubmit={handleSend}>
                     <input type='text' name="name" id="name" value={name} onChange={e => setName(e.target.value)} placeholder='Name'
                     pattern="([a-zA-Z]{2,})|([a-zA-Z])+\s([a-zA-Z])+" required/>
+                    
                     <input type='tel' name="phone" id="phone" value={phone} onChange={e => setPhone(e.target.value)}
                         placeholder='Phone' pattern="\d{10}|\d{3}-\d{7}" required />
+
                     <input type='email' name="mail" id="mail" value={mailState} onChange={e => setMailState(e.target.value)}
                         placeholder='Mail' className='wide-form-elements' pattern='[^@]+@[^@]+\.[a-zA-Z]{2,6}' required />
+
                     <textarea name='msg' id='msg' value={msg} onChange={e => setmsg(e.target.value)} rows={4} cols={20}
                         placeholder='Message' className='wide-form-elements' required />   
+
                     {apiMsg.show && <p className={`api-msg ${apiMsgClass}`}> {apiMsg.msg}<IoCloseSharp className='close-api-msg'
                     onClick={() => setApiMsg({show: false, msg: ''})} /></p>}
-                    <button className='btn send-btn'>
+
+                    <button  className='btn send-btn'>
                         <p>Send Me</p>
                         <span><VscSend className="send-btn-icon wide-form-elements" /></span>
                     </button>             
