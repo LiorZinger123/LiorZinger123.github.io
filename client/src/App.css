@@ -5,14 +5,14 @@ h1{
 @media screen and (min-width: 900px) {
   .site-sections{
     height: 90%;
-    scroll-margin-top: 100px;
+    scroll-margin-top: 80px;
   }  
 }
 
 @media screen and (max-width: 900px) {
   .site-sections{
     height: 95%;
-    scroll-margin-top: 50px;
+    scroll-margin-top: 30px;
   }
 }
 

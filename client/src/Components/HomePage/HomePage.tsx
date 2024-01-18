@@ -1,4 +1,4 @@
-import profile from './Sources/profile_img.jpg'
+import profile from './Sources/profile_img.jpeg'
 import { VscSend } from "react-icons/vsc";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { LuInstagram } from "react-icons/lu";

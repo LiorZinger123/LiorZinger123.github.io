@@ -12,9 +12,9 @@ const AboutMe = () => {
                 <span>Full Stack Developer</span>
             </div>
             <div className="footer-container footer-info-center">
-                <a className='' href="#about">About</a>
-                <a className='' href="#skills">Skills</a>
-                <a className='' href="#timeline">Timeline</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#timeline">Timeline</a>
             </div>
             <div className="footer-container footer-info-right">
                 <a href='https://www.facebook.com/profile.php?id=100000319302762' target="_blank"><FaFacebook size={25} className="footer-icons" /></a>

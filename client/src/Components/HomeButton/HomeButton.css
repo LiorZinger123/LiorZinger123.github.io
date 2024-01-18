@@ -24,7 +24,7 @@
 .home-btn{
     position: sticky;
     float: right;
-    right: 5px;
+    right: 10px;
     color: white;
     background-color: rgba(127, 73, 213, 0.822);
     border-radius: 5px;
