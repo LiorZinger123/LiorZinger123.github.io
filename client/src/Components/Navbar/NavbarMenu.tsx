@@ -15,37 +15,42 @@ const NavbarMenu = (props: Props) => {
   const navRef = useRef<HTMLDivElement>(null)
   
   useEffect((): void => {
-    navRef.current?.addEventListener('click', (): void => {
+    const handleClick = (): void => {
+      navRef?.current?.setAttribute("style","top: 100%;")
       props.setMenu(false)
-      navRef.current?.classList.add('hide-navbar-menu-list')
-    })
+    }
+    navRef?.current?.addEventListener('click', handleClick)
+    return (): void => {
+      navRef?.current?.removeEventListener('click', handleClick)
+    }
   }, [])
 
   return (
-    <div className='navbar-menu-list hide-navbar-menu-list' id='navbar-menu-list' ref={navRef}>
-        <div>
+    <div className='navbar-menu-list' id='navbar-menu-list' ref={navRef}>
+        <a href='#home'>
           <FaHome className='menu-navbar-icon' />
-          <a href='#home'>Home</a>
-        </div>
-        <div>
+          <span>Home</span>
+        </a>
+        <a href="#about">
           <CgProfile className='menu-navbar-icon' />
-          <a href='#about'>About</a>
-        </div>
-        <div>
+          <span>About</span>
+        </a>
+        <a href="#skills">
           <FaReact className='menu-navbar-icon' />
-          <a href='#skills'>Skills</a>
-        </div>
-        <div>
+          <span>Skills</span>
+        </a>
+        <a href='#timeline'>
           <TbTimelineEventFilled className='menu-navbar-icon' />          
-          <a href='#timeline'>Timeline</a></div>
-        <div>
+          <span>Timeline</span>
+        </a>
+        <a href='#contactme'>
           <BiSolidContact className='menu-navbar-icon' />
-          <a href='#contactme'>Contact Me</a>
-        </div>
-        <div>
+          <span>Contact Me</span>
+        </a>
+        <a href='#aboutme'>
           <GrCircleInformation className='menu-navbar-icon' />
-          <a href='#aboutme'>About Me</a>
-        </div>
+          <span>About Me</span>
+        </a>
     </div>
   )
 }

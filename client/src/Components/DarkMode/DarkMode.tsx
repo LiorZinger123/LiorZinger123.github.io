@@ -15,7 +15,7 @@ const DarkMode = (props: Props) => {
 
         const links = [...document.getElementsByTagName('a')]
         const selects = [...document.getElementsByClassName("select")]
-        console.log(links[0])
+        
         if(props.counter % 2 === 0){
         document.body.classList.remove('dark-mode')
         document.body.classList.add("light-mode")
@@ -25,7 +25,7 @@ const DarkMode = (props: Props) => {
         })
         props.setClassname('app app-light-mode')
         props.navbarRef.current.style.backgroundColor = 'White'
-        links.forEach(a => a.className === 'top-navbar-links' ? a.style.color = 'black': null)
+        links.forEach(a => a.className === 'top-navbar-links' || a.className === 'scroll-down' ? a.style.color = 'black': null)
         }
 
         else{
@@ -37,7 +37,7 @@ const DarkMode = (props: Props) => {
         })
         props.setClassname('app app-dark-mode')
         props.navbarRef.current.style.backgroundColor = 'rgb(15, 14, 14)'
-        links.forEach(a => a.className === 'top-navbar-links' ? a.style.color = 'white': null)
+        links.forEach(a => a.className === 'top-navbar-links' || a.className === 'scroll-down' ? a.style.color = 'white': null)
         }
         
         props.setCounter(counter => counter += 1)

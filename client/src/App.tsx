@@ -13,11 +13,32 @@ function App() {
 
   const [classname, setClassname] = useState<string>('app app-light-mode')
   const [top, setTop] = useState<boolean>(false)
-  const appRef = useRef<HTMLDivElement>(null!)
+  const [show, setShow] = useState<boolean>(false)
+  const appRef = useRef<HTMLDivElement>(null)
 
   useEffect((): void => {
-    appRef.current.scrollTo(0, 0)
+    appRef?.current?.scrollTo(0, 0)
   }, [top])
+
+  useEffect((): void => {
+    
+    const handleScroll = (): void => {
+      if(appRef?.current?.scrollTop){
+        const scrollTop = appRef?.current?.scrollTop
+        const showButton = appRef?.current?.clientHeight / 3
+        if(!show && scrollTop > showButton)
+          setShow(true)
+        if(!show && scrollTop < showButton)
+          setShow(false)
+      }
+    }
+
+   appRef?.current?.addEventListener("scroll", handleScroll)
+
+   return (): void => {
+    appRef?.current?.removeEventListener("scroll", handleScroll)
+   }
+  }, [])
 
   return (
     <div className={classname} ref={appRef}>
@@ -28,7 +49,7 @@ function App() {
       <Timeline />
       <ContactMe />
       <AboutMe />
-      <HomeButton setTop={setTop} />
+      {show && <HomeButton setTop={setTop} />}
     </div>
   )
 }
