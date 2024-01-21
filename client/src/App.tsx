@@ -20,7 +20,7 @@ function App() {
     appRef?.current?.scrollTo(0, 0)
   }, [top])
 
-  useEffect((): void => {
+  useEffect((): () => void => {
     
     const handleScroll = (): void => {
       if(appRef?.current?.scrollTop){

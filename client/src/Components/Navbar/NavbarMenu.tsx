@@ -14,7 +14,7 @@ const NavbarMenu = (props: Props) => {
 
   const navRef = useRef<HTMLDivElement>(null)
   
-  useEffect((): void => {
+  useEffect((): () => void => {
     const handleClick = (): void => {
       navRef?.current?.setAttribute("style","top: 100%;")
       props.setMenu(false)
