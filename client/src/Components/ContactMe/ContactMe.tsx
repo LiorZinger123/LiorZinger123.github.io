@@ -12,10 +12,12 @@ const ContactMe = () => {
 
     const [apiMsg, setApiMsg] = useState<apiMsgType>({ show: false, msg: '' })
     const [apiMsgClass, setApiMsgClass] = useState<string>('api-msg')
-    const [name, setName] = useState<string>('')
-    const [phone, setPhone] = useState<string>('')
-    const [mailState, setMailState] = useState<string>('')
-    const [msg, setmsg] = useState<string>('')
+    const [data, setData] = useState({
+        name: '',
+        phone: '',
+        mail: '',
+        msg: ''
+    })
     const call = {icon: <BsTelephone className="site-icons way-to-contact-icon" />, title: "Call Me", info: "052-8037971"}
     const mail = {icon: <IoMailOutline className="site-icons  way-to-contact-icon" />, title: "Mail", info: "liorzinger123@gmail.com"}
     const location = {icon: <GrLocation className="site-icons way-to-contact-icon" />, title: "Location", info: "Hasahlav 14 Street, Haifa, Israel"}
@@ -24,13 +26,14 @@ const ContactMe = () => {
     const handleSend = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
         e.preventDefault()
         try{
-            const data = {name: name, phone: phone, mail: mailState, msg: msg}
             const res = await api('send', data)
-            if(res.status === 200){
-                setName('')
-                setPhone('')
-                setMailState('')
-                setmsg('')
+            if(res.ok){
+                setData({
+                    name: '',
+                    phone: '',
+                    mail: '',
+                    msg: ''
+                })
                 setApiMsg({show: true, msg: 'The message was sent successfully'})
                 setApiMsgClass('api-msg api-msg-green')
             }
@@ -62,16 +65,16 @@ const ContactMe = () => {
             
             <div>
                 <form onSubmit={handleSend}>
-                    <input type='text' name="name" id="name" value={name} onChange={e => setName(e.target.value)} placeholder='Name'
+                    <input type='text' name="name" id="name" value={data.name} onChange={e => setData({...data, name: e.target.value})} placeholder='Name'
                     pattern="([a-zA-Z]{2,})|([a-zA-Z])+\s([a-zA-Z])+" required/>
                     
-                    <input type='tel' name="phone" id="phone" value={phone} onChange={e => setPhone(e.target.value)}
-                        placeholder='Phone' pattern="\d{10}|\d{3}-\d{7}" required />
+                    <input type='tel' name="phone" id="phone" value={data.phone} onChange={e => setData({...data, phone: e.target.value})}
+                        placeholder='Phone' pattern="[0][5][01234568]\d{7}|[0][5][01234568]-\d{7}|[+][9][7][2]\d{9}" required />
 
-                    <input type='email' name="mail" id="mail" value={mailState} onChange={e => setMailState(e.target.value)}
+                    <input type='email' name="mail" id="mail" value={data.mail} onChange={e => setData({...data, mail: e.target.value})}
                         placeholder='Mail' className='wide-form-elements' pattern='[^@]+@[^@]+\.[a-zA-Z]{2,6}' required />
 
-                    <textarea name='msg' id='msg' value={msg} onChange={e => setmsg(e.target.value)} rows={4} cols={20}
+                    <textarea name='msg' id='msg' value={data.msg} onChange={e => setData({...data, msg: e.target.value})} rows={4} cols={20}
                         placeholder='Message' className='wide-form-elements' required />   
 
                     {apiMsg.show && <p className={`api-msg ${apiMsgClass}`}> {apiMsg.msg}<IoCloseSharp className='close-api-msg'

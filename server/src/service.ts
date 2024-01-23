@@ -5,7 +5,6 @@ import { SendData } from "./types";
 
 const sendDetails = async (data: SendData): Promise<number> => {
     try{
-
         const OAuth2 = google.auth.OAuth2
         const OAuth2_Client = new OAuth2(id, secret)
         OAuth2_Client.setCredentials({ refresh_token: refreshToken })
@@ -21,7 +20,7 @@ const sendDetails = async (data: SendData): Promise<number> => {
                 refreshToken: refreshToken,
                 accessToken: accessToken
             }
-          } as nodemailer.TransportOptions)
+        } as nodemailer.TransportOptions)
 
         const mailOptions = {
             from: mail,
@@ -29,7 +28,7 @@ const sendDetails = async (data: SendData): Promise<number> => {
             subject: 'Contact From Portfolio',
             text: `Name: ${data.name}, Phone: ${data.phone}, Mail: ${data.mail}, Message: ${data.msg}`
         }
-
+        
         await transporter.sendMail(mailOptions)
         return 200
     }
