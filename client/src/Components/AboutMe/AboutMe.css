@@ -59,10 +59,22 @@
     }
 }
 
+@media screen and (min-width: 700px) and (max-width: 750px){
+    .about-me{
+        margin-top: 300px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .about-me{
+        margin-top: 40%;
+    }
+}
+
 @media screen and (max-width: 700px){
     .about-me{
         height: 100%;
-        margin-top: 250px;
+        /* margin-top: 250px; */
     }
 
     .footer-info{

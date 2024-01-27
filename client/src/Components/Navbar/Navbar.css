@@ -1,4 +1,4 @@
-@media screen and (min-width: 900px){
+@media screen and (min-width: 950px){
     .navbar{
         height: 8%;
         top: -1px;
@@ -8,7 +8,6 @@
 
     .navbar-links{
         position: absolute;
-        top: 45%;
         right: 220px;
         gap: 8%;
     }
@@ -38,11 +37,7 @@
     }
 }
 
-@media screen and (max-width: 900px) {
-    
-    .navbar{
-        top: 93%;
-    }
+@media screen and (max-width: 950px) {
 
     .navbar-name{
         margin-left: 10%;
@@ -50,7 +45,6 @@
 
     .dark-mode-icon{
         position: absolute;
-        bottom: 3px;
         right: 60px;
     }
 
@@ -71,7 +65,7 @@
         height: 100px;
         position: absolute;
         bottom: -100px;
-        left: 0;  
+        left: 1px;  
         display: grid;
         grid-template-columns: repeat(3, 33.2%);
         grid-template-rows: repeat(2, 50%);
@@ -97,6 +91,28 @@
         font-size: 20px;
         color: black;
         margin-top: 4px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 950px){
+
+    .navbar{
+        top: 92%;
+    }
+
+    .dark-mode-icon{
+        bottom: 1.5px;
+    }
+}
+
+@media screen and (max-width: 700px){
+
+    .navbar{
+        top: 93%;
+    }
+    
+    .dark-mode-icon{
+        bottom: 7.5px;
     }
 }
 

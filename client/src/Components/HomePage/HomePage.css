@@ -12,6 +12,7 @@
     }
     
     .scroll-down{
+        color: black;
         width: 45%;
         margin-top: 10%;
         display: flex;
@@ -46,10 +47,8 @@
     }
 }
 
-@media screen and (min-width: 600px) and (max-width: 900px) {
+@media screen and (min-width: 750px) and (max-width: 900px) {
     .home-page{
-        margin-top: 30px;
-        margin-bottom: 100px;
         width: 80%;
         display: flex;
         gap: 4%;
@@ -65,12 +64,11 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
     .home-page{
-        margin-bottom: 100px;
-        width: 600px;
+        width: 100%;
         display: grid;
-        grid-template-columns: repeat(2, 20%);
+        grid-template-columns: repeat(2, 40%);
         grid-template-rows: repeat(3, 30%);
         position: relative;
     }
@@ -87,6 +85,7 @@
         width: 150px;
         height: 150px;
         position: relative;
+        bottom: 10%;
         right: 60px;
     }
 }

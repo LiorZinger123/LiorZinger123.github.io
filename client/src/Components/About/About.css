@@ -33,7 +33,7 @@
     }
 }
 
-@media screen and (min-width: 600px) and (max-width: 900px) {
+@media screen and (min-width: 750px) and (max-width: 900px) {
 
     .about-img{
         width: 100%;
@@ -44,10 +44,7 @@
     }
 }
 
-@media screen and (max-width: 600px) {
-    .about{
-        margin-bottom: 200px;
-    }
+@media screen and (max-width: 750px) {
 
     .about-info{
         flex-direction: column;
@@ -58,16 +55,15 @@
     }
     
     .about-img{
-        width: 80%;
+        width: 50%;
         height: 170px;
         position: relative;
-        left: 12%;
+        left: 25%;
     }
 
     .about-context{
         width: 100%;
     }
-    
 }
 
 .about-info{

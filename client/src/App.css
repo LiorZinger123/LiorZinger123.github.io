@@ -2,17 +2,26 @@ h1{
   font-size: 40px;
   text-align: center;
 }
+
 @media screen and (min-width: 900px) {
   .site-sections{
     height: 90%;
-    scroll-margin-top: 80px;
-  }  
+    scroll-margin-top: 60px;
+  }
+
+  section{
+    margin-bottom: 18%;
+  }
 }
 
 @media screen and (max-width: 900px) {
   .site-sections{
     height: 95%;
     scroll-margin-top: 30px;
+  }
+
+  section{
+    margin-bottom: 18%;
   }
 }
 
