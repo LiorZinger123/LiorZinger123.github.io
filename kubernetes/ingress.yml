@@ -21,3 +21,11 @@ spec:
                             name: lior-service-client
                             port:
                                 number: 80
+                  - path: /api
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: lior-service-server
+                            port:
+                                number: 80
+                
