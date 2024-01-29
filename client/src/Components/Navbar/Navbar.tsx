@@ -18,13 +18,13 @@ const Navbar = (props: Props) => {
 
   const handleOpen = (): void => {
     const navbarMenuListEl = document.getElementById('navbar-menu-list')
-    navbarMenuListEl?.setAttribute("style","bottom: 100%;")
+    navbarMenuListEl?.setAttribute("style","bottom: 70%;")
     setMenu(true)
   }
 
   const handleClose = (): void => {
     const navbarMenuListEl = document.getElementById('navbar-menu-list')
-    navbarMenuListEl?.setAttribute("style","bottom: -100px;")
+    navbarMenuListEl?.setAttribute("style","bottom: -150%;")
     setMenu(false)
   }
 

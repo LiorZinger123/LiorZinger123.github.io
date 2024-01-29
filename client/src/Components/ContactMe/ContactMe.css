@@ -39,7 +39,7 @@
     }
 }
 
-@media screen and (min-width: 700px) and (max-width: 900px) {
+@media screen and (min-width: 750px) and (max-width: 900px) {
     .contact-me{
         width: 100%;
         margin-left: 7%;
@@ -127,8 +127,9 @@
     }
 
     .send-btn{
-        width: 140px;
-        left: 27%;
+        width: 150px;
+        left: 50%;
+        transform: translate(-50%, 50px);
     }
     
 }

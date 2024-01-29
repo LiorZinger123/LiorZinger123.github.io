@@ -67,14 +67,7 @@
 
 @media screen and (max-width: 700px){
     .about-me{
-        margin-top: 40%;
-    }
-}
-
-@media screen and (max-width: 700px){
-    .about-me{
         height: 100%;
-        /* margin-top: 250px; */
     }
 
     .footer-info{

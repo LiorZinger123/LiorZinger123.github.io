@@ -16,7 +16,7 @@ const About = () => {
   }
 
   return (
-    <section className="site-sections about" id="about">
+    <section className="about" id="about">
       
       <h1>About Me</h1>
       

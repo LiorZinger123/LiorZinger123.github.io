@@ -7,8 +7,8 @@
     }   
 
     .profile-image{
-        width: 50%;
-        height: 60%;
+        width: 25%;
+        height: 25%;
     }
     
     .scroll-down{
@@ -91,7 +91,6 @@
 }
 
 .home-page{
-    height: 80%;
     margin-left: 10%;
 }
   

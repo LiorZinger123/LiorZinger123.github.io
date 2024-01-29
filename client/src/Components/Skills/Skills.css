@@ -1,53 +1,37 @@
+@media screen and (min-width: 900px) {
+
+  .selects{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 90% 90%;
+    justify-items: center;
+  }
+
+  .select{
+    width: 70%;
+  }
+}
+
 @media screen and (max-width: 900px) {
 
     .selects{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .select{
       width: 100%;
+      margin-bottom: 20px;
     }
-}
-
-@media screen and (min-width: 900px) {
-
-    .selects{
-      display: grid;
-      grid-template-columns: auto auto;
-      justify-items: center;
-      padding-top: 5%;
-    }
-
-    .select{
-      width: 70%;
-    }
-}
-
-@media screen and (max-width: 700px) {
-  
-  .selects{
-    margin-top: 70px;
-  } 
-
-} 
-
-@media screen and (min-width: 700px) and (max-width: 750px) {
-
-  .skills{
-    padding-top: 20%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .skills{
-    padding-top: 100px;
-  }
 }
 
 .skills{
   margin-left: 2%;
+}
+
+.selects{
+  padding: 2% 0;
 }
 
 .skills-info{

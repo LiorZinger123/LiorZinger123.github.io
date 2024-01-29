@@ -3,25 +3,20 @@ h1{
   text-align: center;
 }
 
-@media screen and (min-width: 900px) {
-  .site-sections{
-    height: 88%;
-    scroll-margin-top: 60px;
-  }
+section{
+  height: fit-content;
+  margin-bottom: 80px;
+}
 
+@media screen and (min-width: 900px) {
   section{
-    margin-bottom: 10%;
+    scroll-margin-top: 60px;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .site-sections{
-    height: 95%;
-    scroll-margin-top: 30px;
-  }
-
   section{
-    margin-bottom: 10%;
+    scroll-margin-top: 30px;
   }
 }
 

@@ -1,29 +1,33 @@
 @media screen and (min-width: 900px) {
-
-    .about-info{
-        width: 80%;
-        margin-left: 11%;
+    
+    .about{
+        height: 480px;
     }
 
     .about-info{
+        /* background-color: aquamarine; */
+        width: 80%;
+        height: 80%;
+        margin-left: 11%;
         gap: 7%;
     }
     
     .about-img-div{
+        /* background-color: antiquewhite; */
         width: 45%;
+        height: 100%;
     }
 
     .about-img{
         width: 90%;
-        height: 60%;
-        top: 37%;
+        height: 70%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 
     .about-context{
         width: 50%;
-        height: 60%;
     }
 }
 
@@ -57,7 +61,6 @@
     .about-img{
         width: 50%;
         height: 170px;
-        position: relative;
         left: 25%;
     }
 
@@ -78,7 +81,7 @@
   .about-context{
     word-break: keep-all;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
   }
   
   .years{
@@ -86,7 +89,6 @@
     justify-content: center;
     gap: 15%;
     font-size: smaller;
-
   }
 
   .year{
@@ -103,7 +105,6 @@
     width: 170px;
     height: 55px;
     position: relative;
-    top: 10px;
     left: 50%;
     transform: translateX(-50%);
   }
