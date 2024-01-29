@@ -7,11 +7,6 @@
   font-family: 'Poppins', sans serif;
 }
 
-body{
-  background-color: #8EC5FC;
-  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-}
-
 .app{
   position: absolute;
   top: 50%;
@@ -24,6 +19,11 @@ body{
 }
 
 @media screen and (min-width: 700px){
+  body{
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  }
+  
   .app{
     width: 75%;
     height: 80%;

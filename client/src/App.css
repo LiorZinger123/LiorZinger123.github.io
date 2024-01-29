@@ -5,12 +5,12 @@ h1{
 
 @media screen and (min-width: 900px) {
   .site-sections{
-    height: 90%;
+    height: 88%;
     scroll-margin-top: 60px;
   }
 
   section{
-    margin-bottom: 18%;
+    margin-bottom: 10%;
   }
 }
 
@@ -21,7 +21,7 @@ h1{
   }
 
   section{
-    margin-bottom: 18%;
+    margin-bottom: 10%;
   }
 }
 
