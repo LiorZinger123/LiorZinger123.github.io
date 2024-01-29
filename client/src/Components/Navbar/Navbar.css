@@ -51,27 +51,21 @@
     }
 
     .navbar-links{
+        width: 100%;
         position: absolute;
-        right: 10px;
-        /* width: 100%; */
+        margin-left: 80%;
+        gap: 5%;
     }
     
-    /* .dark-mode-icon{ */
-        /* position: sticky; */
-        /* bottom: 0; */
-        /* right: 5px; */
-        /* float: right; */
-        /* bottom: 15%; */
-        /* right: 15%; */
-    /* } */
+    .dark-mode-icon{
+        position: relative;
+        top: 12px;
+    }
 
-    /* .navbar-menu{
-        position: sticky;
-        float: right;
-        bottom: 0;
-        right: 300px;
-        cursor: pointer;
-    }  */
+    .navbar-menu{
+        position: relative;
+        top: 5px;
+    } 
 
     .top-navbar-links{
         display: none;

@@ -41,8 +41,8 @@ const Navbar = (props: Props) => {
         {!menu && <DarkMode setClassname={props.setClassname} navbarRef={navbarRef} counter={counter} setCounter={setCounter} />}
         {!menu && <span className="navbar-menu" onClick={handleOpen}><IoIosMenu size={30} /></span>}
         {menu && <IoCloseSharp className='navbar-menu' onClick={handleClose} />}
-        <NavbarMenu setMenu={setMenu} />
       </nav>
+      <NavbarMenu setMenu={setMenu} />
     </div>
   )
 }
