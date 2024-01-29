@@ -47,7 +47,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          #context: "{{defaultContext}}"
+          context: "{{defaultContext}}:server"
           push: true
           tags: gaimes410/liorsinger:server
           #tags: ${{ steps.meta.outputs.tags }}
