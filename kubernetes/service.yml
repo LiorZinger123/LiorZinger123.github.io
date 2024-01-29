@@ -4,7 +4,7 @@ metadata:
     name: my-service
 spec:
     selector:
-        app.kubernetes.io/name: lior
+        app.kubernetes.io/name: lior-client
     ports:
         - protocol: TCP
           port: 8080
