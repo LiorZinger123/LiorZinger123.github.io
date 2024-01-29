@@ -2,15 +2,15 @@ name: Build and Push Docker Image to Docker Hub
 
 on:
   push:
-    branches: [ "kubernetes" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "kubernetes" ]
+    branches: [ "main" ]
 
 env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: docker.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: gaimes410/liorsinger:latest
 
 jobs:
 
