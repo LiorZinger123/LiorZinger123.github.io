@@ -17,5 +17,6 @@ spec:
             containers:
                 - name: portfolio
                   image: gaimes410/liorsinger:client
+                  imagePullPolicy: Always
                   ports:
                       - containerPort: 4173
