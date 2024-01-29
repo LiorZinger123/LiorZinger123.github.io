@@ -10,7 +10,7 @@ env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: docker.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: gaimes410/liorsinger:latest
+  IMAGE_NAME: gaimes410/liorsinger:client
 
 jobs:
 
@@ -21,7 +21,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . -t gaimes410/liorsinger:latest 
+      run: docker build . -t gaimes410/liorsinger:client 
   push_to_registry:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
@@ -49,6 +49,6 @@ jobs:
         with:
           #context: "{{defaultContext}}"
           push: true
-          tags: gaimes410/liorsinger:latest
+          tags: gaimes410/liorsinger:client
           #tags: ${{ steps.meta.outputs.tags }}
           #labels: ${{ steps.meta.outputs.labels }}

@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: lior-deployment
+    name: lior-deployment-client
     labels:
-        app.kubernetes.io/name: lior
+        app.kubernetes.io/name: lior-client
 spec:
     replicas: 3
     selector:
         matchLabels:
-            app.kubernetes.io/name: lior
+            app.kubernetes.io/name: lior-client
     template:
         metadata:
             labels:
-                app.kubernetes.io/name: lior
+                app.kubernetes.io/name: lior-client
         spec:
             containers:
                 - name: portfolio
-                  image: gaimes410/liorsinger:latest
+                  image: gaimes410/liorsinger:client
                   ports:
                       - containerPort: 4173
