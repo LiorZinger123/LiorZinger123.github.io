@@ -3,6 +3,6 @@ import { sendData } from './controller'
 
 const router = Router()
 
-router.post('/send', sendData)
+router.post('/api/send', sendData)
 
 export default router
