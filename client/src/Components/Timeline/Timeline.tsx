@@ -10,7 +10,7 @@ const Timeline = () => {
                       {title: "TMM Course", years: "May 2020 - August 2020"}]
 
   return (
-    <section className='timeline-section site-sections' id="timeline">
+    <section className='timeline-section' id="timeline">
         <h1>Timeline</h1>
           <div className="timeline">
 

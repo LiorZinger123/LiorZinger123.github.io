@@ -49,7 +49,7 @@ const ContactMe = () => {
     }
 
   return (
-    <section className='site-sections' id="contactme">
+    <section id="contactme">
         <h1>Contact Me</h1>
         
         <div className="contact-me">

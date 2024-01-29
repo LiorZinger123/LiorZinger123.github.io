@@ -45,7 +45,7 @@ const DarkMode = (props: Props) => {
 
   return (
     <>
-        <span className="dark-mode-icon" onClick={changeMode}>
+        <span className="dark-mode-icon" id="dark-mode-icon" onClick={changeMode}>
           {props.counter % 2 === 0 ? <MdOutlineWbSunny size={20} /> : <LuMoon size={20} />}
         </span>
     </>

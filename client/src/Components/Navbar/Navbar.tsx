@@ -18,13 +18,17 @@ const Navbar = (props: Props) => {
 
   const handleOpen = (): void => {
     const navbarMenuListEl = document.getElementById('navbar-menu-list')
-    navbarMenuListEl?.setAttribute("style","bottom: 70%;")
+    const darkModeIconEl = document.getElementById("dark-mode-icon")
+    navbarMenuListEl?.setAttribute("style","bottom: 80%;")
+    darkModeIconEl?.setAttribute('style', 'visibility: hidden')
     setMenu(true)
   }
 
   const handleClose = (): void => {
     const navbarMenuListEl = document.getElementById('navbar-menu-list')
+    const darkModeIconEl = document.getElementById("dark-mode-icon")
     navbarMenuListEl?.setAttribute("style","bottom: -150%;")
+    darkModeIconEl?.setAttribute('style', 'visibility: visible')
     setMenu(false)
   }
 
@@ -38,9 +42,9 @@ const Navbar = (props: Props) => {
         <a className='top-navbar-links' href="#timeline">Timeline</a>
         <a className='top-navbar-links' href="#contactme">Contact Me</a>
         <a className='top-navbar-links' href="#aboutme">About Me</a>
-        {!menu && <DarkMode setClassname={props.setClassname} navbarRef={navbarRef} counter={counter} setCounter={setCounter} />}
-        {!menu && <span className="navbar-menu" onClick={handleOpen}><IoIosMenu size={30} /></span>}
-        {menu && <IoCloseSharp className='navbar-menu' onClick={handleClose} />}
+        <DarkMode setClassname={props.setClassname} navbarRef={navbarRef} counter={counter} setCounter={setCounter} />
+        {!menu ? <span className="navbar-menu" onClick={handleOpen}><IoIosMenu size={30} /></span>
+        : <span className='navbar-menu' onClick={handleClose}><IoCloseSharp size={30} /></span>}
       </nav>
       <NavbarMenu setMenu={setMenu} />
     </div>
