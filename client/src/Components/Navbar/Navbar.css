@@ -41,13 +41,11 @@
 @media screen and (max-width: 950px) {
 
     .navbar{
-        height: 6%;
+        min-height: 6%;
         width: 100%;
-        top: 93% !important;
+        top: 93%;
         align-items: center;
         border-top: 1px solid black;
-        transform: translate3d(0,0,0);
-        transform-style: preserver-3s;
         transform: translateZ(0);
     }
     
@@ -120,7 +118,7 @@
 }
 
 .navbar{
-    position: sticky !important;
+    position: sticky;
     background-color: white;
     padding-top: 2%;
     display: flex;
