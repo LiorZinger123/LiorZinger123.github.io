@@ -77,13 +77,22 @@
         background-color: white;
         width: 99%;
         height: 250%;
-        position: absolute;
         bottom: -250%;
+        position: absolute;
         left: 2px;  
-        display: grid;
         grid-template-columns: repeat(3, 33.2%);
         grid-template-rows: repeat(2, 50%);
         transition: bottom 1s ease;
+    }
+
+    .hide-navbar-menu-list{
+        display: none;
+        /* bottom: -250%; */
+    }
+
+    .show-navbar-menu-list{
+        display: grid;
+        /* bottom: 80%; */
     }
 
     .navbar-menu-list a{

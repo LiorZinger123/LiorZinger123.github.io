@@ -19,9 +19,13 @@ const Navbar = (props: Props) => {
   const handleOpen = (): void => {
     const navbarMenuListEl = document.getElementById('navbar-menu-list')
     const darkModeIconEl = document.getElementById("dark-mode-icon")
-    navbarMenuListEl?.setAttribute('style', 'visibility: visible;')
-    navbarMenuListEl?.setAttribute("style","bottom: 80%;")
+    navbarMenuListEl?.classList.remove('hide-navbar-menu-list')
+    navbarMenuListEl?.classList.add('show-navbar-menu-list')
+    navbarMenuListEl?.setAttribute('style', 'display: grid;')
     darkModeIconEl?.setAttribute('style', 'visibility: hidden;')
+    setTimeout((): void => {
+      navbarMenuListEl?.setAttribute("style","bottom: 80%;")
+    })
     setMenu(true)
   }
 
@@ -32,7 +36,8 @@ const Navbar = (props: Props) => {
     darkModeIconEl?.setAttribute('style', 'visibility: visible;')
     setMenu(false)
     setTimeout((): void => {
-      navbarMenuListEl?.setAttribute('style', 'visibility: hidden;')
+      navbarMenuListEl?.classList.remove('show-navbar-menu-list')
+      navbarMenuListEl?.classList.add('hide-navbar-menu-list')
     }, 1000)
   }
 

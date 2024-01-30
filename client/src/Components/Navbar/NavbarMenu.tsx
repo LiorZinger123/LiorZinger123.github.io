@@ -21,7 +21,6 @@ const NavbarMenu = (props: Props) => {
       navRef?.current?.setAttribute("style","top: 100%;")
       props.setMenu(false)
     }
-    navRef?.current?.setAttribute('style', 'visibility: hidden;')
     navRef?.current?.addEventListener('click', handleClick)
     return (): void => {
       navRef?.current?.removeEventListener('click', handleClick)
@@ -29,7 +28,7 @@ const NavbarMenu = (props: Props) => {
   }, [])
 
   return (
-    <div className='navbar-menu-list' id='navbar-menu-list' ref={navRef}>
+    <div className='navbar-menu-list hide-navbar-menu-list' id='navbar-menu-list' ref={navRef}>
         <a href='#home'>
           <FaHome className='menu-navbar-icon' />
           <span>Home</span>
