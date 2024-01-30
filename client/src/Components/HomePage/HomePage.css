@@ -1,7 +1,8 @@
 @media screen and (min-width: 900px) {
     .home-page{
-        margin-top: 3%;
         width: 75%;
+        margin-left: 10%;
+        margin-top: 3%;
         display: flex;
         gap: 10%;
     }   
@@ -51,6 +52,7 @@
 @media screen and (min-width: 750px) and (max-width: 900px) {
     .home-page{
         width: 80%;
+        margin-left: 10%;
         display: flex;
         gap: 4%;
     }
@@ -67,7 +69,8 @@
 
 @media screen and (max-width: 750px) {
     .home-page{
-        width: 90%;
+        left: 15%;
+        width: 80%;
         display: grid;
         grid-template-columns: repeat(2, 40%);
         grid-template-rows: repeat(3, 30%);
@@ -76,7 +79,6 @@
     
     .home-page-aboutme{
         width: 100%;
-        text-align: left;
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 2;
@@ -91,10 +93,6 @@
     }
 }
 
-.home-page{
-    margin-left: 10%;
-}
-  
 .home-page nav{
     margin-top: 8%;
     display: flex;

@@ -117,8 +117,9 @@
 
     .contact-me form > *:not(:last-child){
         padding-left: 10px;
-        width: 97%;
+        width: 90%;
         height: 50px;
+        margin-left: 2%;
         margin-bottom: 20px;
     }
 

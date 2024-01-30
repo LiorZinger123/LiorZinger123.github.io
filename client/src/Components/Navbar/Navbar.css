@@ -42,9 +42,8 @@
 
     .navbar{
         height: 6%;
-        width: 99.9%;
+        width: 100%;
         top: 93%;
-        display: flex;
         align-items: center;
         border-top: 1px solid black;
     }
@@ -56,7 +55,7 @@
     .navbar-links{
         width: 15%;
         position: absolute;
-        right: 7%;
+        right: 20px;
         gap: 45%;
     }
     
@@ -76,11 +75,11 @@
 
     .navbar-menu-list{
         background-color: white;
-        width: 100%;
+        width: 99%;
         height: 250%;
         position: absolute;
-        bottom: -250%;
-        left: 1px;  
+        bottom: -230%;
+        left: 2px;  
         display: grid;
         grid-template-columns: repeat(3, 33.2%);
         grid-template-rows: repeat(2, 50%);
@@ -112,7 +111,6 @@
 
 .navbar{
     position: sticky;
-    /* background-color: aquamarine; */
     background-color: white;
     padding-top: 2%;
     display: flex;

@@ -15,12 +15,13 @@ const NavbarMenu = (props: Props) => {
   const navRef = useRef<HTMLDivElement>(null)
   
   useEffect((): () => void => {
-    const handleClick = (): void => {
+    const handleClick = () => {
       const darkModeIconEl = document.getElementById("dark-mode-icon")
       darkModeIconEl?.setAttribute('style', 'visibility: visible')
       navRef?.current?.setAttribute("style","top: 100%;")
       props.setMenu(false)
     }
+    navRef?.current?.setAttribute('style', 'visibility: hidden')
     navRef?.current?.addEventListener('click', handleClick)
     return (): void => {
       navRef?.current?.removeEventListener('click', handleClick)
