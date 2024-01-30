@@ -78,7 +78,7 @@
         width: 99%;
         height: 250%;
         position: absolute;
-        bottom: -230%;
+        bottom: -250%;
         left: 2px;  
         display: grid;
         grid-template-columns: repeat(3, 33.2%);

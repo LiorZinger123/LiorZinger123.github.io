@@ -69,7 +69,7 @@
 
 @media screen and (max-width: 750px) {
     .home-page{
-        left: 15%;
+        left: 18%;
         width: 80%;
         display: grid;
         grid-template-columns: repeat(2, 40%);

@@ -21,7 +21,7 @@ const NavbarMenu = (props: Props) => {
       navRef?.current?.setAttribute("style","top: 100%;")
       props.setMenu(false)
     }
-    navRef?.current?.setAttribute('style', 'visibility: hidden')
+    navRef?.current?.setAttribute('style', 'visibility: hidden;')
     navRef?.current?.addEventListener('click', handleClick)
     return (): void => {
       navRef?.current?.removeEventListener('click', handleClick)
