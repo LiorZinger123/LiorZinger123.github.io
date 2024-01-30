@@ -80,7 +80,7 @@ const ContactMe = () => {
                     {apiMsg.show && <p className={`api-msg ${apiMsgClass}`}> {apiMsg.msg}<IoCloseSharp className='close-api-msg'
                     onClick={() => setApiMsg({show: false, msg: ''})} /></p>}
 
-                    <button  className='btn send-btn'>
+                    <button className='btn send-btn'>
                         <p>Send Me</p>
                         <span><VscSend className="send-btn-icon wide-form-elements" /></span>
                     </button>             

@@ -27,7 +27,7 @@ const Navbar = (props: Props) => {
   const handleClose = (): void => {
     const navbarMenuListEl = document.getElementById('navbar-menu-list')
     const darkModeIconEl = document.getElementById("dark-mode-icon")
-    navbarMenuListEl?.setAttribute("style","bottom: -150%;")
+    navbarMenuListEl?.setAttribute("style","bottom: -250%;")
     darkModeIconEl?.setAttribute('style', 'visibility: visible')
     setMenu(false)
   }

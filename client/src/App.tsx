@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import Navbar from './Components/Navbar/Navbar'
 import HomePage from './Components/HomePage/HomePage'
-import About from './Components/About/About'
+import AboutMe from './Components/AboutMe/AboutMe'
 import Skills from './Components/Skills/Skills'
 import Timeline from './Components/Timeline/Timeline'
 import ContactMe from './Components/ContactMe/ContactMe'
 import HomeButton from './Components/HomeButton/HomeButton'
-import AboutMe from './Components/AboutMe/AboutMe'
+import AboutMeFooter from './Components/AboutMeFooter/AboutMeFooter'
 import './App.css'
 
 function App() {
@@ -44,11 +44,11 @@ function App() {
     <div className={classname} ref={appRef}>
       <Navbar setClassname={setClassname} setTop={setTop} />
       <HomePage />
-      <About />
+      <AboutMe />
       <Skills />
       <Timeline />
       <ContactMe />
-      <AboutMe />
+      <AboutMeFooter />
       {show && <HomeButton setTop={setTop} />}
     </div>
   )
