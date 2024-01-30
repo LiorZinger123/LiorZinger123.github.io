@@ -40,6 +40,7 @@
 @media screen and (max-width: 950px) {
 
     .navbar{
+        height: 6%;
         top: 93%;
         display: flex;
         align-items: center;
@@ -53,7 +54,7 @@
     .navbar-links{
         width: 15%;
         position: absolute;
-        right: 0;
+        right: 15px;
         gap: 30%;
     }
     
@@ -107,18 +108,10 @@
     }
 }
 
-@media screen and (max-width: 700px){
-
-    .navbar{
-        /* top: 93.5%; */
-    }
-}
-
 .navbar{
     position: sticky;
     background-color: white;
     width: 100%;
-    height: 6%;
     padding-top: 2%;
     display: flex;
     z-index: 2;
