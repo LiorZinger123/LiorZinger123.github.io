@@ -46,6 +46,7 @@
         top: 93%;
         align-items: center;
         border-top: 1px solid black;
+        /* overflow-anchor: none; */
     }
     
     .navbar-name{
@@ -87,12 +88,10 @@
 
     .hide-navbar-menu-list{
         display: none;
-        /* bottom: -250%; */
     }
 
     .show-navbar-menu-list{
         display: grid;
-        /* bottom: 80%; */
     }
 
     .navbar-menu-list a{
