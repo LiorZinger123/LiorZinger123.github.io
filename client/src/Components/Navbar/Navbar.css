@@ -1,5 +1,6 @@
 @media screen and (min-width: 950px){
     .navbar{
+        width: 100%;
         height: 8%;
         top: -1px;
         border-bottom: 1px solid rgba(127, 73, 213, 0.822);
@@ -41,6 +42,7 @@
 
     .navbar{
         height: 6%;
+        width: 99.9%;
         top: 93%;
         display: flex;
         align-items: center;
@@ -54,8 +56,8 @@
     .navbar-links{
         width: 15%;
         position: absolute;
-        right: 6%;
-        gap: 40%;
+        right: 7%;
+        gap: 45%;
     }
     
     .dark-mode-icon{
@@ -110,8 +112,8 @@
 
 .navbar{
     position: sticky;
+    /* background-color: aquamarine; */
     background-color: white;
-    width: 100%;
     padding-top: 2%;
     display: flex;
     z-index: 2;

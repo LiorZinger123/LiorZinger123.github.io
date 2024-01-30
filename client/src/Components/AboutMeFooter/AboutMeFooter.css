@@ -36,7 +36,7 @@
     }
 
     .footer-info{
-        width: 100%;
+        width: 80%;
         top: 7%;
         left: 7%;
         display: grid;
@@ -71,7 +71,7 @@
     }
 
     .footer-info{
-        width: 100%;
+        width: 80%;
         top: 7%;
         left: 7%;
         display: flex;

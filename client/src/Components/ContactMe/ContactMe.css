@@ -43,18 +43,19 @@
 
 @media screen and (min-width: 750px) and (max-width: 900px) {
     .contact-me{
-        width: 100%;
-        margin-left: 7%;
+        width: 88%;
+        margin-left: 8%;
     }
     
     .way-to-contact span{
         word-break: break-all;
     }
-    
+
     .contact-me form{
-        grid-template-columns: repeat(2, 35%);
+        width: 270px;
+        grid-template-columns: repeat(2, 40%);
         grid-template-rows: repeat(3, 45%);
-        margin-left: 10%;
+        margin-left: 8%;
     }
 
     .contact-me form > *:not(:last-child) {
@@ -92,7 +93,7 @@
 
 @media screen and (max-width: 750px) {
     .contact-me{
-        width: 100%;
+        width: 97%;
         display: flex;
         flex-direction: column;
         margin-left: 3%;
@@ -116,7 +117,7 @@
 
     .contact-me form > *:not(:last-child){
         padding-left: 10px;
-        width: 90%;
+        width: 97%;
         height: 50px;
         margin-bottom: 20px;
     }
