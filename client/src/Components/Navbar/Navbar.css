@@ -54,8 +54,8 @@
     .navbar-links{
         width: 15%;
         position: absolute;
-        right: 15px;
-        gap: 30%;
+        right: 6%;
+        gap: 40%;
     }
     
     .dark-mode-icon{
