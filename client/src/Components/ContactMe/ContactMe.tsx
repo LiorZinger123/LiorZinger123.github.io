@@ -66,7 +66,7 @@ const ContactMe = () => {
             <div>
                 <form onSubmit={handleSend}>
                     <input type='text' name="name" id="name" value={data.name} onChange={e => setData({...data, name: e.target.value})} placeholder='Name'
-                    pattern="([a-zA-Z]{2,})|([a-zA-Z])+\s([a-zA-Z])+" required/>
+                    pattern="^[^0-9]+$" required/>
                     
                     <input type='tel' name="phone" id="phone" value={data.phone} onChange={e => setData({...data, phone: e.target.value})}
                         placeholder='Phone' pattern="[0][5][01234568]\d{7}|[0][5][01234568]-\d{7}|[+][9][7][2]\d{9}" required />
