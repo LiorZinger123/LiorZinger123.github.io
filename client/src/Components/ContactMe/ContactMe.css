@@ -73,7 +73,6 @@
     }
 
     .send-btn{
-        width: 150px;
         left: 50%;
     }
 }
@@ -130,7 +129,6 @@
     }
 
     .send-btn{
-      width: 150px;
       left: 50%;
       transform: translate(-55%, 30px);
     }
@@ -230,6 +228,7 @@
   }
 
   .send-btn{
+    width: 150px;
     font-family: "Poppins";
     font-size: large;
     position: relative;
