@@ -32,8 +32,8 @@ const sendDetails = async (data: SendData): Promise<number> => {
         await transporter.sendMail(mailOptions)
         return 200
     }
-    catch(e){
-        throw e
+    catch{
+        return 502
     }
 }
 
