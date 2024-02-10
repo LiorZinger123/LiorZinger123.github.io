@@ -3,7 +3,7 @@
   .selects{
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 90% 90%;
+    grid-template-rows: 70% 90%;
     justify-items: center;
   }
 
